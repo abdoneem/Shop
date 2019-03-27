@@ -13,6 +13,10 @@ namespace Shop.UIForms.ViewModels
     {
         private static MainViewModel instance;
 
+        public string UserEmail { get; set; }
+
+        public string UserPassword { get; set; }
+
         public ObservableCollection<MenuItemViewModel> Menus { get; set; }
 
         public TokenResponse Token { get; set; }
@@ -22,6 +26,8 @@ namespace Shop.UIForms.ViewModels
         public ProductsViewModel Products { get; set; }
 
         public AddProductViewModel AddProduct { get; set; }
+
+        public EditProductViewModel EditProduct { get; set; }
 
         public ICommand AddProductCommand { get { return new RelayCommand(this.GoAddProduct); }  }
 
