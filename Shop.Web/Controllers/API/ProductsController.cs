@@ -39,6 +39,11 @@
                 return this.BadRequest(ModelState);
             }
 
+            if (product.User == null || string.IsNullOrEmpty(product.User.Email))
+            {
+                return this.BadRequest("You must specify an user email.");
+            }
+
             var user = await this.userHelper.GetUserByEmailAsync(product.User.Email);
             if (user == null)
             {

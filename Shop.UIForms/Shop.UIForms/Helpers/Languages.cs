@@ -34,5 +34,7 @@
         public static string PasswordPlaceHolder => Resource.PasswordPlaceHolder;
 
         public static string Remember => Resource.Remember;
+
+        public static string RegisterNewUser => Resource.RegisterNewUser;
     }
 }
