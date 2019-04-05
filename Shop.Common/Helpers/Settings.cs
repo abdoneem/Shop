@@ -9,6 +9,7 @@
         private const string userEmail = "userEmail";
         private const string userPassword = "userPassword";
         private const string isRemember = "isRemember";
+        private const string user = "user";
         private static readonly string stringDefault = string.Empty;
         private static readonly bool boolDefault = false;
 
@@ -24,6 +25,12 @@
         {
             get => AppSettings.GetValueOrDefault(userEmail, stringDefault);
             set => AppSettings.AddOrUpdateValue(userEmail, value);
+        }
+
+        public static string User
+        {
+            get => AppSettings.GetValueOrDefault(user, stringDefault);
+            set => AppSettings.AddOrUpdateValue(user, value);
         }
 
         public static string UserPassword
