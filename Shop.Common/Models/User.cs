@@ -57,5 +57,14 @@ namespace Shop.Common.Models
 
         [JsonProperty("accessFailedCount")]
         public long AccessFailedCount { get; set; }
+
+        [JsonProperty("cityId")]
+        public int CityId { get; set; }
+
+        [JsonProperty("address")]
+        public string Address { get; set; }
+
+        public string FullName { get { return $"{this.FirstName} {this.LastName}"; } }
+
     }
 }
